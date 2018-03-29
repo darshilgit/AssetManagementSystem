@@ -1,0 +1,11 @@
+﻿Enable-Migrations -contextTypeName AppContext -MigrationsDirectory Migrations\AssetManagementScripts
+
+Add-migration -ConfigurationTypeName AssetManagement.Migrations.AssetManagementScripts.Configuration "Intial"
+
+update-database -ConfigurationTypeName AssetManagement.Migrations.AssetManagementScripts.Configuration
+-----------------------------------------------------------------------------------------------------------------
+Enable-Migrations -contextTypeName ApplicationDbContext -MigrationsDirectory Migrations\AccountScripts
+
+Add-migration -ConfigurationTypeName AssetManagement.Migrations.AccountScripts.Configuration "Intial"
+
+update-database -ConfigurationTypeName AssetManagement.Migrations.AccountScripts.Configuration

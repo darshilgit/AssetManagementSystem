@@ -1,0 +1,78 @@
+﻿@model AssetManagement.Models.AssetManagement.ResourceCheckList
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Check Resources</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @*<h4>ResourceCheckList</h4>*@
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.Hidden("FacilityId", Model.FacilityId)
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Resource Name</th>
+                    <th>Description</th>
+                    <th>Size</th>
+                    <th>Color</th>
+                    <th>Current Quantity</th>
+                    <th>Comment <span class="text-danger">*</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ var index = 0; }
+                @for (var i=0; i< Model.ResourceList.Count; i++)
+                {   <tr>
+                        <td>
+                            @Html.Hidden("ResourceList[" + index + "].ResourceId", Model.ResourceList[i].ResourceId)
+                            @Html.Hidden("ResourceList[" + index + "].OriginalQuantity", Model.ResourceList[i].OriginalQuantity)
+                            @Html.Hidden("ResourceList[" + index + "].FacilityId", Model.ResourceList[i].FacilityId)
+                            @Html.Hidden("ResourceList[" + index + "].ResourceName", Model.ResourceList[i].ResourceName)
+                            @Model.ResourceList[i].ResourceName
+                        </td>
+                        <td>
+                            @Html.Hidden("ResourceList[" + index + "].Description", Model.ResourceList[i].Description)
+                            @Model.ResourceList[i].Description
+                        </td>
+                        <td>
+                            @Html.Hidden("ResourceList[" + index + "].Size", Model.ResourceList[i].Size)
+                            @Model.ResourceList[i].Size
+                        </td>
+                        <td>
+                            @Html.Hidden("ResourceList[" + index + "].Color", Model.ResourceList[i].Color)
+                            @Model.ResourceList[i].Color
+                        </td>
+                        <td>
+                            @Html.EditorFor(Model => Model.ResourceList[i].CurrentQuantity)
+                        </td>
+                        <td>
+                            @Html.EditorFor(Model => Model.ResourceList[i].Comment)
+                        </td>
+                    </tr>
+                    index++;
+                }
+            </tbody>
+        </table>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index", "Facilities", null, null)
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
