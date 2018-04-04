@@ -8,6 +8,10 @@ namespace AssetManagement.Models.AssetManagement
 {
     public class Facility : BaseEntity
     {
+        public Facility()
+        {
+            Resources = new List<Resource>();
+        }
         [Key]
         public int FacilityId { get; set; }
 

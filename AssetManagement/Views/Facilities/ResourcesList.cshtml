@@ -1,0 +1,65 @@
+﻿@model AssetManagement.Models.AssetManagement.Facility
+@{
+    ViewBag.Title = "Resources List";
+}
+
+<h2>Resources List</h2>
+
+<table class="table">
+    <tr>
+
+        <th>
+            <h5> Resource Name</h5>
+        </th>
+        <th>
+            <h5> Quantity</h5>
+        </th>
+        <th>
+            <h5> Colour</h5>
+        </th>
+        <th>
+            <h5> Size</h5>
+        </th>
+
+
+        @*<th>
+            @Html.DisplayNameFor(model => model.Landmark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZipCode)
+        </th>*@
+    </tr>    
+
+
+
+    @foreach (var resoure in Model.Resources)
+    {
+        if (resoure.IsActive == true)
+        {
+    <tr>
+        <td>
+            @resoure.ResourceName
+        </td>
+        <td>
+            @resoure.Quantity
+        </td>
+        <td>
+            @resoure.Color
+        </td>
+        <td>
+            @resoure.Size
+        </td>
+    </tr>
+
+        }
+    }
+    </table>

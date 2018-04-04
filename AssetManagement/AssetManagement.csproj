@@ -199,25 +199,18 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ResourceInventoryController.cs" />
     <Compile Include="Controllers\ResourcesController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Data\ApplicationDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\AccountScripts\201803252328324_MasterMerge.cs" />
-    <Compile Include="Migrations\AccountScripts\201803252328324_MasterMerge.Designer.cs">
-      <DependentUpon>201803252328324_MasterMerge.cs</DependentUpon>
+    <Compile Include="Migrations\AccountScripts\201803300437181_MigrationName.cs" />
+    <Compile Include="Migrations\AccountScripts\201803300437181_MigrationName.Designer.cs">
+      <DependentUpon>201803300437181_MigrationName.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\AccountScripts\201803252355358_ResourcecInventory table for resource check.cs" />
-    <Compile Include="Migrations\AccountScripts\201803252355358_ResourcecInventory table for resource check.Designer.cs">
-      <DependentUpon>201803252355358_ResourcecInventory table for resource check.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\AccountScripts\201803260031381_Resources table changes quantity type to int.cs" />
-    <Compile Include="Migrations\AccountScripts\201803260031381_Resources table changes quantity type to int.Designer.cs">
-      <DependentUpon>201803260031381_Resources table changes quantity type to int.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\AccountScripts\201803270107270_added initial qty and facility id in resourceInventory.cs" />
-    <Compile Include="Migrations\AccountScripts\201803270107270_added initial qty and facility id in resourceInventory.Designer.cs">
-      <DependentUpon>201803270107270_added initial qty and facility id in resourceInventory.cs</DependentUpon>
+    <Compile Include="Migrations\AccountScripts\201803300506056_Initialized_Resources_in_FacilitesModel.cs" />
+    <Compile Include="Migrations\AccountScripts\201803300506056_Initialized_Resources_in_FacilitesModel.Designer.cs">
+      <DependentUpon>201803300506056_Initialized_Resources_in_FacilitesModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AccountScripts\Configuration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -262,7 +255,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -309,6 +304,10 @@
     <Content Include="Views\ResourceInventory\Index.cshtml" />
     <Content Include="Views\FacilityReport\FacilityReport.cshtml" />
     <Content Include="Views\FacilityReport\ResourceDetailReport.cshtml" />
+    <Content Include="Views\Facilities\ResourcesList.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -326,17 +325,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\AccountScripts\201803252328324_MasterMerge.resx">
-      <DependentUpon>201803252328324_MasterMerge.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\AccountScripts\201803300437181_MigrationName.resx">
+      <DependentUpon>201803300437181_MigrationName.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\AccountScripts\201803252355358_ResourcecInventory table for resource check.resx">
-      <DependentUpon>201803252355358_ResourcecInventory table for resource check.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\AccountScripts\201803260031381_Resources table changes quantity type to int.resx">
-      <DependentUpon>201803260031381_Resources table changes quantity type to int.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\AccountScripts\201803270107270_added initial qty and facility id in resourceInventory.resx">
-      <DependentUpon>201803270107270_added initial qty and facility id in resourceInventory.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\AccountScripts\201803300506056_Initialized_Resources_in_FacilitesModel.resx">
+      <DependentUpon>201803300506056_Initialized_Resources_in_FacilitesModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

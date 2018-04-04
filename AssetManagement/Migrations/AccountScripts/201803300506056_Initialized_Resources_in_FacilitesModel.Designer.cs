@@ -7,13 +7,13 @@ namespace AssetManagement.Migrations.AccountScripts
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class MasterMerge : IMigrationMetadata
+    public sealed partial class Initialized_Resources_in_FacilitesModel : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(MasterMerge));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initialized_Resources_in_FacilitesModel));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803252328324_MasterMerge"; }
+            get { return "201803300506056_Initialized_Resources_in_FacilitesModel"; }
         }
         
         string IMigrationMetadata.Source

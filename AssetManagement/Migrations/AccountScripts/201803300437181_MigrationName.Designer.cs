@@ -7,13 +7,13 @@ namespace AssetManagement.Migrations.AccountScripts
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ResourcecInventorytableforresourcecheck : IMigrationMetadata
+    public sealed partial class MigrationName : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ResourcecInventorytableforresourcecheck));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(MigrationName));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803252355358_ResourcecInventory table for resource check"; }
+            get { return "201803300437181_MigrationName"; }
         }
         
         string IMigrationMetadata.Source

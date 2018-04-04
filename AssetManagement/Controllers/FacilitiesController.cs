@@ -34,6 +34,12 @@ namespace AssetManagement.Controllers
             
         }
 
+        public ActionResult ResourcesList(int id)
+        {
+            var relatedResources = db.Facilities.Include(r => r.Resources).SingleOrDefault(f => f.FacilityId == id);
+            return View(relatedResources);
+        }
+
         // GET: Facilities/Details/5
         [Authorize(Roles = "Admin, Resource Checker")]
         public ActionResult Details(int? id)

@@ -29,6 +29,9 @@
         <th>
             @Html.DisplayNameFor(model => model.ZipCode)
         </th>
+        <th>
+            Resources
+        </th>
         @*<th>
             @Html.DisplayNameFor(model => model.UpdatedOn)
         </th>
@@ -41,7 +44,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.FacilityName)
+            <a href="/Facilities/ResourcesList/@item.FacilityId">@Html.DisplayFor(modelItem => item.FacilityName)</a>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Landmark)
